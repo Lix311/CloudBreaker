@@ -316,7 +316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 188502545}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.13}
+  m_LocalPosition: {x: 0, y: 0, z: 2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -572,7 +572,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 4.5, z: -2.88}
+  m_LocalPosition: {x: 8.02, y: 4.5, z: -2.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -654,7 +654,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 691610575}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.07, y: 3.6, z: -1.3496094}
+  m_LocalPosition: {x: 12.07, y: 6.92, z: -1.3496094}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -966,6 +966,7 @@ GameObject:
   - component: {fileID: 1883298919}
   - component: {fileID: 1883298918}
   - component: {fileID: 1883298920}
+  - component: {fileID: 1883298921}
   m_Layer: 0
   m_Name: Buster Sword
   m_TagString: Untagged
@@ -1101,6 +1102,21 @@ PolygonCollider2D:
       - {x: 0.68, y: 0.315}
     - - {x: 0.85999995, y: 0.435}
       - {x: 0.87, y: 0.405}
+--- !u!114 &1883298921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1883298917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64dc30522721f46f79d55494eddf7957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenWidthInUnits: 16
+  minX: 2
+  maxX: 14
 --- !u!1 &1886635657
 GameObject:
   m_ObjectHideFlags: 0

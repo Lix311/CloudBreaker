@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class BusterSword : MonoBehaviour
 {
-    [SerializeField] float screenWidthInUnits = 16f;
+    [SerializeField] float screenWidthInUnits = 23f;
     [SerializeField] float minX = 2f;
-    [SerializeField] float maxX = 14f;
+    [SerializeField] float maxX = 21f;
     // Start is called before the first frame update
     void Start()
     {

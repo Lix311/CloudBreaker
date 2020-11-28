@@ -47,4 +47,13 @@ public class Materia : MonoBehaviour
         Vector2 swordPos = new Vector2(bustersword1.transform.position.x, bustersword1.transform.position.y);
         transform.position = swordPos + swordToMateriaVector;
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (hasStarted)
+        {
+            GetComponent<AudioSource>().Play();
+        }
+       
+    }
 }

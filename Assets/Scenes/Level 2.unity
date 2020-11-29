@@ -779,7 +779,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: c35068a8dd5bc43d2b6d931b771014f6, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -1738,8 +1738,38 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8165088844069467631, guid: eae709cd476d84d6283f1361cff60ba8,
         type: 3}
+      propertyPath: materiaSounds.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8165088844069467631, guid: eae709cd476d84d6283f1361cff60ba8,
+        type: 3}
       propertyPath: bustersword1
       value: 
       objectReference: {fileID: 384217469}
+    - target: {fileID: 8165088844069467631, guid: eae709cd476d84d6283f1361cff60ba8,
+        type: 3}
+      propertyPath: materiaSounds.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5b49b184b049249aa8ab013bc08d1888, type: 3}
+    - target: {fileID: 8165088844069467631, guid: eae709cd476d84d6283f1361cff60ba8,
+        type: 3}
+      propertyPath: materiaSounds.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: c35068a8dd5bc43d2b6d931b771014f6, type: 3}
+    - target: {fileID: 8165088844069467631, guid: eae709cd476d84d6283f1361cff60ba8,
+        type: 3}
+      propertyPath: materiaSounds.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: b4c0c197a8e444977b3f3ec42470e077, type: 3}
+    - target: {fileID: 8165088844069467631, guid: eae709cd476d84d6283f1361cff60ba8,
+        type: 3}
+      propertyPath: materiaSounds.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6c4cc80d128544487a979c565a235566, type: 3}
+    - target: {fileID: 8165088844069467631, guid: eae709cd476d84d6283f1361cff60ba8,
+        type: 3}
+      propertyPath: materiaSounds.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 6e2160bc78df64d519e254304116551a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: eae709cd476d84d6283f1361cff60ba8, type: 3}

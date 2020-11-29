@@ -9,15 +9,21 @@ public class Materia : MonoBehaviour
     [SerializeField] BusterSword bustersword1;
     [SerializeField] float xPush = 2f;
     [SerializeField] float yPush = 15f;
+    [SerializeField] AudioClip[] materiaSounds;
 
     // state
     Vector2 swordToMateriaVector;
     bool hasStarted = false;
 
+    // Cashed component references
+    AudioSource myAudioSource;
+
     // Start is called before the first frame update
     void Start()
     {
         swordToMateriaVector = transform.position - bustersword1.transform.position;
+        myAudioSource = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -52,7 +58,8 @@ public class Materia : MonoBehaviour
     {
         if (hasStarted)
         {
-            GetComponent<AudioSource>().Play();
+            AudioClip clip = materiaSounds[UnityEngine.Random.Range(0, materiaSounds.Length)];
+            myAudioSource.PlayOneShot(clip);
         }
        
     }

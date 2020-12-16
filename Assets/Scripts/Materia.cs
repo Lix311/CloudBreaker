@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿
 using UnityEngine;
 
 public class Materia : MonoBehaviour
@@ -10,6 +8,7 @@ public class Materia : MonoBehaviour
     [SerializeField] float xPush = 2f;
     [SerializeField] float yPush = 15f;
     [SerializeField] AudioClip[] materiaSounds;
+    [SerializeField] float randomFactor = 0.2f;
 
     // state
     Vector2 swordToMateriaVector;
@@ -17,12 +16,15 @@ public class Materia : MonoBehaviour
 
     // Cashed component references
     AudioSource myAudioSource;
+    Rigidbody2D myRigidBody2D;
+
 
     // Start is called before the first frame update
     void Start()
     {
         swordToMateriaVector = transform.position - bustersword1.transform.position;
         myAudioSource = GetComponent<AudioSource>();
+        myRigidBody2D = GetComponent<Rigidbody2D>();
 
     }
 
@@ -44,7 +46,7 @@ public class Materia : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             hasStarted = true;
-            GetComponent<Rigidbody2D>().velocity = new Vector2(xPush, yPush);
+            myRigidBody2D.velocity = new Vector2(xPush, yPush);
         }
     }
 
@@ -56,10 +58,12 @@ public class Materia : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Vector2 velocityTweak = new Vector2(Random.Range(0f, randomFactor), Random.Range(0f, randomFactor));
         if (hasStarted)
         {
             AudioClip clip = materiaSounds[UnityEngine.Random.Range(0, materiaSounds.Length)];
             myAudioSource.PlayOneShot(clip);
+            myRigidBody2D.velocity += velocityTweak;
         }
        
     }
